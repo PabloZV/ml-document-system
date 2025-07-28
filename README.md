@@ -378,47 +378,6 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
 ```
 
-## Performance & Test Results
-
-**Processing Performance:**
-- **API response time**: ~2.3 seconds per document (including LLM processing)
-- **ChromaDB storage**: Persistent vector storage with metadata
-- **Search performance**: Sub-second semantic search results
-- **Document types**: 13+ categories supported
-
-**Validation Results:**
-```bash
-# Management Command Test
-✓ Processed: 0000126151.jpg → advertisement (confidence: 0.92)
-✓ Processed: 0000126164.jpg → advertisement (confidence: 0.88)  
-✓ Processed: 0000158166.jpg → advertisement (confidence: 0.95)
-Processing complete! Success rate: 100%
-
-# API Tests  
-✓ GET /api/stats/ → System statistics working
-✓ POST /api/process/ → File upload and ML processing successful
-✓ GET /api/search/ → Semantic search returning relevant results
-✓ Web Interface → Interactive document processing functional
-```
-
-**Production Ready Features:**
-- Django management command for batch processing
-- REST API endpoints with comprehensive responses
-- LLM-based document classification and entity extraction
-- Vector database integration with semantic search
-- Professional web interface for testing
-- Docker containerization with volume mounting
-- Error handling and comprehensive logging
-- Confidence scoring and performance metrics
-
-## Documentation
-
-This README contains all technical documentation including:
-- Complete setup and usage instructions
-- Architecture and implementation details  
-- API documentation with examples
-- ML features and performance metrics
-
 **Quick Commands:**
 ```bash
 # Start the system
