@@ -1,0 +1,14 @@
+pytesseract
+opencv-python
+pillow
+pandas
+scikit-learn
+chromadb
+sentence-transformers
+transformers
+torch
+spacy
+tqdm
+django>=4.2.0
+djangorestframework
+python-multipart

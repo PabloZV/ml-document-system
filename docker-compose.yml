@@ -1,0 +1,17 @@
+services:
+  document-processor:
+    container_name: document-processor
+    image: document-processor:latest
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data:ro
+      - ./output:/app/output
+      - ./document_processor:/app/document_processor
+      - ./processor:/app/processor
+      - ./manage.py:/app/manage.py
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_DEBUG=True
+      - DJANGO_RELOAD=True
